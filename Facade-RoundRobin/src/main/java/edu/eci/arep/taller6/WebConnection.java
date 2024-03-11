@@ -7,17 +7,35 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
+/**
+ * class to connect with remote service
+ * 
+ * @author Santiago Forero Yate
+ */
 public class WebConnection {
     private static final String USER_AGENT = "Mozilla/5.0";
     private static String[] GET_URLs;
-    private int instancia = 1;
+    private int instancia = 0;
 
+
+    /**
+     * method that sets an array of strings
+     * @param urls urls to connect remotely
+     */
     public void setURLInvoked(String[] urls){
         GET_URLs = urls;
     }
 
-    public String connect(String [] args) throws IOException{
-        URL obj = new URL(GET_URLs[instancia]);
+    /**
+     * method to connect with remote service and returns de response
+     * @param queryValue Url query
+     * @return A string with response
+     * @throws IOException
+     */
+    public String connect(String queryValue) throws IOException{
+        URL obj = new URL(GET_URLs[instancia]+queryValue+getInstance());
+        System.out.println("URL destino: "+ GET_URLs[instancia]);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
         con.setRequestProperty("User-Agent", USER_AGENT);
@@ -43,6 +61,23 @@ public class WebConnection {
             System.out.println("GET request not worked");
         }
         System.out.println("GET DONE");
+        changeInstance();
         return response.toString();
+    }
+
+    /**
+     * method that implements round robin to redirect urls
+     */
+    private void changeInstance(){
+        this.instancia = (this.instancia + 1) % GET_URLs.length;
+    }
+
+
+    /**
+     * return the instace of the server
+     * @return an int that represents the instance
+     */
+    private int getInstance(){
+        return instancia;
     }
 }

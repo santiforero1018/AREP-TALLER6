@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <h1>AREP Taller 6</h1>
+        <form action="/loginservice">
+            <label for="name">Message:</label><br>
+            <input type="text" id="name" name="name" value="digita un mensaje"><br><br>
+            <input type="button" value="Submit" onclick="app.loadGetMsg()">
+        </form> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="getrespmsg"></div>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-package edu.eci.arep.taller6;
+package edu.eci.arep.mongo.taller6;
 
 import static org.junit.Assert.assertTrue;
 
