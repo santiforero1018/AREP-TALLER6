@@ -53,7 +53,7 @@ docker-compose up -d
 - Si accedió y descargo el proyecto desde Docker hub, copie el contenido del siguiente archivo .yml en uno respectivo:
 
 ```yaml
-version: "1"
+version: "3.8"
 
 services:
   db:
@@ -112,6 +112,10 @@ se evidencian el retorno de mensajes del servidor en formato Json
 Para acceder al mismo servicio (el cual se configuro mediante  docker compose), se puede usar la url [](http://ec2-3-88-197-125.compute-1.amazonaws.com:57000/form.html) y se veria de la siguiente manera:
 
 ![prueba AWS](README-resources/prueba-AWS.png)
+
+A continuación, encontrara un breve video del paso a paso seguido para configurar el despliegue en AWS
+
+
 
 ## AUTOR
 
