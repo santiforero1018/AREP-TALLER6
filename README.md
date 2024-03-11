@@ -113,8 +113,10 @@ Para acceder al mismo servicio (el cual se configuro mediante  docker compose), 
 
 ![prueba AWS](README-resources/prueba-AWS.png)
 
-A continuación, encontrara un breve video del paso a paso seguido para configurar el despliegue en AWS
+A continuación, encontrara un breve video del paso a paso seguido para configurar el despliegue en AWS (Tambien se encuentra adjunto de la carpeta README-resources)
 
+
+https://github.com/santiforero1018/AREP-TALLER6/assets/88952698/f8bd03ab-afb3-46c8-b990-d5bb8108555e
 
 
 ## AUTOR
