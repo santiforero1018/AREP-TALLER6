@@ -109,7 +109,7 @@ se evidencian el retorno de mensajes del servidor en formato Json
 
 ### Acceso al servicio de AWS
 
-Para acceder al mismo servicio (el cual se configuro mediante  docker compose), se puede usar la url [](http://ec2-3-88-197-125.compute-1.amazonaws.com:57000/form.html) y se veria de la siguiente manera:
+Se usa el DNS publico de la maquina de AWS para entrar al servicio, y se veria de la siguiente manera:
 
 ![prueba AWS](README-resources/prueba-AWS.png)
 
